@@ -11,8 +11,7 @@ import {
 
 const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
 export const CategoryDistributionChart = () => {
-  const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === "ar"; // Detect RTL language
+  const { t } = useTranslation();
   const categoryData = [
     { name: t("Electronics"), value: 4500 },
     { name: t("Clothing"), value: 3200 },

@@ -10,6 +10,7 @@ import {
 } from "recharts";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+
 const monthlySalesData = [
   { month: "Jan", sales: 4000 },
   { month: "Feb", sales: 3000 },
@@ -23,6 +24,7 @@ const monthlySalesData = [
 export const SalesOverviewChart = () => {
   const { t } = useTranslation();
   const [selectedTimeRange, setSelectedTimeRange] = useState("This Month");
+
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700 mb-8"
@@ -35,18 +37,24 @@ export const SalesOverviewChart = () => {
           {t("SalesOverview")}
         </h2>
 
-        <select
-          className="bg-gray-700 text-white rounded-md px-3 py-1 focus:outline-none focus:ring-2 
-focus:ring-blue-500
-"
-          value={selectedTimeRange}
-          onChange={(e) => setSelectedTimeRange(e.target.value)}
-        >
-          <option>This Week</option>
-          <option>This Month</option>
-          <option>This Quarter</option>
-          <option>This Year</option>
-        </select>
+        {/* Accessible label for the select element */}
+        <div>
+          <label htmlFor="timeRange" className="sr-only">
+            {t("Select Time Range")}
+          </label>
+          <select
+            id="timeRange"
+            className="bg-gray-700 text-white rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={selectedTimeRange}
+            onChange={(e) => setSelectedTimeRange(e.target.value)}
+            aria-label={t("Select Time Range")} // Adding aria-label for accessibility
+          >
+            <option>{t("This Week")}</option>
+            <option>{t("This Month")}</option>
+            <option>{t("This Quarter")}</option>
+            <option>{t("This Year")}</option>
+          </select>
+        </div>
       </div>
 
       <div className="w-full h-80">
