@@ -1,0 +1,19 @@
+/* Apply global direction */
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  text-align: left;
+}
+
+/* Language Switcher Dropdown */
+.language-switcher {
+  margin: 10px;
+}
+
+.language-switcher select {
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
