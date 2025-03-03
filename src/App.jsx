@@ -6,6 +6,7 @@ import ProductsPage from "./Pages/ProductsPage";
 import OverviewPage from "./Pages/OverviewPage";
 import Sidebar from "./Components/Sidebar";
 import { UserPage } from "./Pages/UserPage";
+import { SalesPage } from "./Pages/SalesPage";
 
 function App() {
   const { i18n } = useTranslation();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/" element={<OverviewPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/users" element={<UserPage />} />
+        <Route path="/sales" element={<SalesPage />} />
       </Routes>
     </div>
   );
