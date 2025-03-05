@@ -110,7 +110,7 @@ const Sidebar = () => {
           <Menu size={24} />
         </motion.button>
         <nav className="mt-8 flex-grow">
-          {isSidebarOpen && <LanguageSwitcher />}
+          {<LanguageSwitcher isSidebarOpen={isSidebarOpen} />}
           {SIDEBAR_ITEMS.map((item, index) => (
             <Link key={index} to={item.href} aria-label={item.ariaLabel}>
               <motion.div className="flex items-center p-4 text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors mb-2">

@@ -1,21 +1,22 @@
-import { Header } from "../Components/Common/Header";
+import { Header } from "../components/common/Header.jsx";
 import { StatCard } from "../Components/Common/StatCard";
 import { motion } from "framer-motion";
 import { CreditCard, DollarSign, ShoppingCart, TrendingUp } from "lucide-react";
 import { SalesOverviewChart } from "../Components/Overview/SalesOverviewChart";
 import { SalesByCategoryChart } from "../Components/Common/Sales/SalesByCategoryChart";
 import { DailySalesTrend } from "../Components/Common/Sales/DailySalesTrend ";
+import { t } from "i18next";
 
 export const SalesPage = () => {
   const salesStats = {
-    totalRevenue: "$1,234,567",
-    averageOrderValue: "$78.90",
-    conversionRate: "3.45%",
-    salesGrowth: "12.3%",
+    totalRevenue: t("1234567"),
+    averageOrderValue: t("78.9"),
+    conversionRate: t("3.45"),
+    salesGrowth: t("12.3"),
   };
   return (
-    <div className="flex-1 overflow-auto relative z-10 ">
-      <Header title="Sales" />
+    <div className="flex-1 overflow-auto relative  ">
+      <Header title={t("SalesDashboard")} />
       <main className="max-w-7xl mx-auto py-6 px-4 lg:px-8">
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8"
@@ -24,25 +25,25 @@ export const SalesPage = () => {
           transition={{ duration: 1 }}
         >
           <StatCard
-            name="Total Revenue"
+            name={t("TotalRevenue")}
             icon={DollarSign}
             value={salesStats.totalRevenue}
             color="#6366F1"
           />
           <StatCard
-            name="Avg. Order Value"
+            name={t("AvgOrderValue")}
             icon={ShoppingCart}
             value={salesStats.averageOrderValue}
             color="#10B981"
           />
           <StatCard
-            name="Conversion Rate"
+            name={t("ConversionRate")}
             icon={TrendingUp}
             value={salesStats.conversionRate}
             color="#F59E0B"
           />
           <StatCard
-            name="Sales Growth"
+            name={t("SalesGrowth")}
             icon={CreditCard}
             value={salesStats.salesGrowth}
             color="#EF4444"

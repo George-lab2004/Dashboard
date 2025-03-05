@@ -46,7 +46,9 @@ export const DailySalesTrend = () => {
               }}
               itemStyle={{ color: "#E5E7EB" }}
             />
-            <Bar dataKey="sales" fill="#10B981" />
+            <Legend formatter={(value) => t(value)} />
+
+            <Bar dataKey="sales" fill="#10e981" />
           </BarChart>
         </ResponsiveContainer>
       </div>

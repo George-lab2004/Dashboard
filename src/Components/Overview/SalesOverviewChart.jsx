@@ -49,10 +49,10 @@ export const SalesOverviewChart = () => {
             onChange={(e) => setSelectedTimeRange(e.target.value)}
             aria-label={t("Select Time Range")} // Adding aria-label for accessibility
           >
-            <option>{t("This Week")}</option>
-            <option>{t("This Month")}</option>
-            <option>{t("This Quarter")}</option>
-            <option>{t("This Year")}</option>
+            <option>{t("Week")}</option>
+            <option>{t("Month")}</option>
+            <option>{t("Quarter")}</option>
+            <option>{t("Year")}</option>
           </select>
         </div>
       </div>
