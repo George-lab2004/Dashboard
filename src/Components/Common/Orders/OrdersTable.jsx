@@ -91,7 +91,7 @@ export const OrdersTable = () => {
           <input
             type="text"
             placeholder={t("SearchOrders")}
-            className="bg-gray-700 text-white placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-gray-700 text-white placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-80 md:w-96 lg:w-[400px] max-w-full"
             value={searchTerm}
             onChange={handleSearch}
           />
