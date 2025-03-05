@@ -1,7 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import Profile from "./Components/Settings/Profile";
-import DangerZone from "./Pages/DangerZone";
 
 const savedLanguage = localStorage.getItem("language") || "en"; // Load saved language
 const resources = {
