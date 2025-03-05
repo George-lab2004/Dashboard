@@ -1,4 +1,4 @@
-import { Header } from "../components/common/Header.jsx";
+import { Header } from "../Components/Common/Header";
 import { StatCard } from "../Components/Common/StatCard";
 import { motion } from "framer-motion";
 import { CreditCard, DollarSign, ShoppingCart, TrendingUp } from "lucide-react";

@@ -4,7 +4,7 @@ import { ConnectedAccounts } from "../Components/Settings/ConnectedAccounts";
 import { Notifications } from "../Components/Settings/Notifications";
 import { Profile } from "../Components/Settings/Profile";
 import { Security } from "../Components/Settings/Security";
-import DangerZone from "./DangerZone";
+import DangerZone from "../Components/Settings/DangerZone";
 
 export const SettingsPage = () => {
   const { t } = useTranslation();
